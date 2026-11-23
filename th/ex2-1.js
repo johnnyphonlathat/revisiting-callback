@@ -6,9 +6,26 @@
     4. แจ้งเตือนกรณีมีคนแชร์โพส
 - ให้เขียน function ที่ทำงานตามที่โจทย์กำหนด
 */
-
 // Start Coding Here
+const sendNotification = (callback) => {
+    return `แจ้งเตือน:`+ callback();
+} 
 
+const postCreated = () => {
+    return ` โพสต์ของคุณถูกสร้างสำเร็จ!`;
+}
+
+const postLiked = () => {
+    return ` มีคนมากดไลค์โพสต์ของคุณ!`;
+}
+
+const postCommented = () => {
+    return ` มีคนมาคอมเมนต์ในโพสต์ของคุณ!`;
+}
+
+const postShared = () => {
+    return ` มีคนแชร์โพสต์ของคุณ!`;
+}
 
 // เมื่อ function นี้ทำงานจะเห็นผลลัพธ์ดังนี้
 console.log(sendNotification(postCreated));   // 📝 แจ้งเตือน: โพสต์ของคุณถูกสร้างสำเร็จ!
